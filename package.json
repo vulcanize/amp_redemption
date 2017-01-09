@@ -1,0 +1,28 @@
+{
+  "name": "rchain",
+  "version": "1.0.0",
+  "description": "Create a client side application that will allow users to initiate an online transaction and check on the status of the transaction. The transaction itself will take place by means of an API provided by Client. 80|20 will be a 100% client-side HTML, CSS, and JavaScript application that will be deployed by others as a GitHub Pages static website.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://iambriansreed@github.com/80-20/rchain-api-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/80-20/rchain-api-client/issues"
+  },
+  "homepage": "https://github.com/80-20/rchain-api-client#readme"
+}

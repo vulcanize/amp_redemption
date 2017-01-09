@@ -1,0 +1,22 @@
+{
+  "name": "rchain",
+  "description": "A client side application that will allow users to initiate an online transaction and check on the status of the transaction.",
+  "main": "index.js",
+  "authors": [
+    "Brian Reed <me@iambrian.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/80-20/rchain-api-client",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.1",
+    "angular-ui-router": "^0.3.2"
+  }
+}

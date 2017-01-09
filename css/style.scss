@@ -1,0 +1,38 @@
+html, body {
+
+  height: 100%;
+}
+
+#page {
+  padding-top: 70px;
+  position: relative;
+  height: 100%;
+}
+
+#header {
+
+  margin-top: 2em;
+
+  .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: #ddd;
+    color: #333;
+  }
+}
+
+.error-message {
+  display: none;
+}
+
+.has-error {
+  > .error-message {
+    display: block;
+  }
+}
+
+.vertical-center {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

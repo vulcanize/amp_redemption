@@ -1,0 +1,75 @@
+<div class="container">
+    <h1>Transaction Status</h1>
+    <hr>
+    <div ng-if="vm.response.error">
+
+        <h4 class="text-danger" style="margin-bottom: 1.25em;">Your transaction status returned an
+            error.</h4>
+
+        <p class="alert alert-danger" ng-bind="vm.response.error.message"></p>
+
+        <p class="text-right">
+            <button type="button" class="btn btn-default" ng-click="vm.reset();">Reset</button>
+        </p>
+
+    </div>
+    <div ng-if="vm.response.success">
+
+        <h4 class="text-success" style="margin-bottom: 1.25em;">Your transaction status check is a
+            success.</h4>
+
+        <div class="form-group form-group-lg">
+            <label class="control-label" for="rawTransactionSubmissionUrl">Raw Transaction Submission</label>
+            <input id="rawTransactionSubmissionUrl" class="form-control"
+                   ng-model="vm.response.success.rawTransactionSubmissionUrl" readonly />
+        </div>
+
+        <div class="form-group form-group-lg">
+            <label class="control-label" for="transactionStatusUrl">Transaction Status</label>
+            <input id="transactionStatusUrl" class="form-control"
+                   ng-model="vm.response.success.transactionStatusUrl" readonly />
+        </div>
+
+        <div class="form-group form-group-lg">
+            <label class="control-label" for="transactionEtheriumUrl">Etherium Transaction</label>
+            <input id="transactionEtheriumUrl" class="form-control"
+                   ng-model="vm.response.success.transactionEtheriumUrl" readonly />
+        </div>
+
+        <p class="text-right">
+            <button type="button" class="btn btn-default" ng-click="vm.reset();">Reset</button>
+        </p>
+
+    </div>
+    <div ng-if="!vm.response.error && !vm.response.success">
+        <form ng-submit="vm.submit()" name="vm.form" novalidate>
+
+            <div class="form-group form-group-lg" ng-form="Receipt">
+                <label class="control-label" for="Receipt">Receipt</label>
+                <input id="Receipt" class="form-control" type="text" ng-model="vm.Receipt"
+                       required>
+                <p class="help-block text-danger error-message">This is a required field.</p>
+            </div>
+
+            <div class="demo well-sm pull-left bg-warning">
+                <strong class="text-warning">Demo:</strong>&emsp;
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-model="vm.demo.returnError">Return Error</label>
+            </div>
+
+            <p class="text-right">
+                <span class="well-sm text-primary bg-info"
+                      ng-if="vm.formSubmitting">Submitting...</span>&emsp;
+                <button type="reset" class="btn btn-default" ng-disabled="vm.formSubmitting"
+                        ng-click="vm.reset()">
+                    Reset
+                </button>&emsp;
+                <button type="submit" class="btn btn-primary" ng-disabled="vm.formSubmitting">
+                    Submit
+                </button>
+            </p>
+
+        </form>
+    </div>
+
+</div>
