@@ -19,15 +19,6 @@
 
         vm.reset();
 
-        vm.demo = {
-            returnError: false,
-            setData: function () {
-                vm.AMPAddress = '897fn8d3ng89b2mf050nfi';
-                vm.EthereumAddress = 'yc786enkj029unkgopwj';
-                vm.ToS = true;
-            }
-        };
-
         vm.submit = function () {
 
             vm.response = {
@@ -41,7 +32,7 @@
 
             vm.formSubmitting = true;
 
-            ApiService.checkEligibility(vm.demo.returnError)
+            ApiService.checkEligibility()
                 .then(function (response) {
                     vm.response.success = response;
                 })
