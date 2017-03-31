@@ -21,6 +21,9 @@
 
         vm.reset(true);
 
+        vm.demo = {
+            returnError: false
+        };
 
         ReceiptService.get()
             .then(function (receipt) {
@@ -43,7 +46,7 @@
 
             vm.formSubmitting = true;
 
-            ApiService.checkTransactionStatus()
+            ApiService.checkTransactionStatus(vm.demo.returnError)
                 .then(function (response) {
                     vm.response.success = response;
                 })

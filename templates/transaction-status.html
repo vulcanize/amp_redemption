@@ -51,6 +51,12 @@
                 <p class="help-block text-danger error-message">This is a required field.</p>
             </div>
 
+            <div class="demo well-sm pull-left bg-warning">
+                <strong class="text-warning">Demo:</strong>&emsp;
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-model="vm.demo.returnError">Return Error</label>
+            </div>
+
             <p class="text-right">
                 <span class="well-sm text-primary bg-info"
                       ng-if="vm.formSubmitting">Submitting...</span>&emsp;

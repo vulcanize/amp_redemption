@@ -172,6 +172,14 @@
                 </div>
             </div>
 
+            <div class="demo well-sm pull-left bg-warning">
+                <strong class="text-warning">Demo:</strong>&emsp;
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-model="vm.demo.returnError">Return Error</label>
+                <button type="button" class="btn btn-link" ng-click="vm.demo.setData()">Set Data
+                </button>
+            </div>
+
             <p class="text-right">
                 <span class="well-sm text-primary bg-info"
                       ng-if="vm.formSubmitting">Submitting...</span>&emsp;
